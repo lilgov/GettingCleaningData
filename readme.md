@@ -23,9 +23,9 @@ run_analysis() will utilize the following R libraries, which must be installed:
 
 ### Installing
 
-*1.*  Download the Smartlab HAR dataset from the UCI repository:
+1.  Download the Smartlab HAR dataset from the UCI repository:
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
-*1.*  Place the current R script, run_analysis.R, in the same directory as the HAR dataset
+2.  Place the current R script, run_analysis.R, in the same directory as the HAR dataset
 
 
 ## Running the tests
@@ -47,35 +47,20 @@ as follows:
 ## What the code does
 
 The function run_analysis() performs the following operations on the data sets:
-1.  Reads text file  activity_labels.txt  containing names and ID #s of each of the
-6 activities.
-2.  Reads the text file  features.txt  containing descriptive names of each of the
-accelerometer &/or gyro measurements.  These correspond to the columns/variables
-of the X data files.
-3.  Identifies the indices in the list of features for variables of interest, namely
-those containing either "mean" or "std" in their names.
-1.  Reads the train X data file.
-1.  Retains only those columns in X which correspond to features for "mean" and "std".
-1.  Places feature names on the retained columns.
-1.  Reads the subject ID corresponding to each row of X for the training data.
-1.  Reads the assigned activity label for each row of X for the training data.
-1.  Completes the training data set by prepending columns for subject ID and activity label
-onto the table of X training data.
-1.  Repeats steps (4-9), but applied to the test data set's X, y, subject ID and
-activity labels.
-1.  "Merge"s the training and test data sets by binding together the rows from the
-two data sets.
-1.  Constructs a nested pair of for-loops, which systematically steps through all
-combinations of subject IDs and activity labels;
-at each loop, the function filters the merged data set from step (11) for the current
-particular (subject ID, activity label) pair, and takes the column means of all
-features/variables.
-1.  Row-by-row, in each pass through the nested for-loop, records a new row in the final
-output table containing the subject ID, activity label, and means for all of the
-corresponding "mean" and "std" features in the X data.
-1.  Writes a text file, finalTable.txt, containing this newly-constructed summary table
-of averages of the "mean" and "std" accelerometer and gyro data on a per subject ID and
-activity label basis.
+1.  Reads text file  activity_labels.txt  containing names and ID #s of each of the 6 activities.
+2.  Reads the text file  features.txt  containing descriptive names of each of the accelerometer &/or gyro measurements.  These correspond to the columns/variables of the X data files.
+3.  Identifies the indices in the list of features for variables of interest, namely those containing either "mean" or "std" in their names.
+4.  Reads the train X data file.
+5.  Retains only those columns in X which correspond to features for "mean" and "std".
+6.  Places feature names on the retained columns.
+7.  Reads the subject ID corresponding to each row of X for the training data.
+8.  Reads the assigned activity label for each row of X for the training data.
+9.  Completes the training data set by prepending columns for subject ID and activity label onto the table of X training data.
+10.  Repeats steps (4-9), but applied to the test data set's X, y, subject ID and activity labels.
+11.  "Merge"s the training and test data sets by binding together the rows from the two data sets.
+12.  Constructs a nested pair of for-loops, which systematically steps through all combinations of subject IDs and activity labels; at each loop, the function filters the merged data set from step (11) for the current particular (subject ID, activity label) pair, and takes the column means of all features/variables.
+13.  Row-by-row, in each pass through the nested for-loop, records a new row in the final output table containing the subject ID, activity label, and means for all of the corresponding "mean" and "std" features in the X data.
+14.  Writes a text file, finalTable.txt, containing this newly-constructed summary table of averages of the "mean" and "std" accelerometer and gyro data on a per subject ID and activity label basis.
 
 
 ## Authors
