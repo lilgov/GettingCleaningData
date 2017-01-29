@@ -47,14 +47,15 @@ as follows:
 ## What the code does
 
 The function run_analysis() performs the following operations on the data sets:
-1.  Reads text file  activity_labels.txt  containing names and ID #s of each of the 6 activities.
-2.  Reads the text file  features.txt  containing descriptive names of each of the accelerometer &/or gyro measurements.  These correspond to the columns/variables of the X data files.
-3.  Identifies the indices in the list of features for variables of interest, namely those containing either "mean" or "std" in their names.
-4.  Reads the train X data file.
-5.  Retains only those columns in X which correspond to features for "mean" and "std".
-6.  Places feature names on the retained columns.
-7.  Reads the subject ID corresponding to each row of X for the training data.
-8.  Reads the assigned activity label for each row of X for the training data.
+
+1. Reads text file  activity_labels.txt  containing names and ID #s of each of the 6 activities.
+2. Reads the text file  features.txt  containing descriptive names of each of the accelerometer &/or gyro measurements.  These correspond to the columns/variables of the X data files.
+3. Identifies the indices in the list of features for variables of interest, namely those containing either "mean" or "std" in their names.
+4. Reads the train X data file.
+5. Retains only those columns in X which correspond to features for "mean" and "std".
+6. Places feature names on the retained columns.
+7. Reads the subject ID corresponding to each row of X for the training data.
+8. Reads the assigned activity label for each row of X for the training data.
 9.  Completes the training data set by prepending columns for subject ID and activity label onto the table of X training data.
 10.  Repeats steps (4-9), but applied to the test data set's X, y, subject ID and activity labels.
 11.  "Merge"s the training and test data sets by binding together the rows from the two data sets.
