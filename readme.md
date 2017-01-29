@@ -14,7 +14,7 @@ combinations reported in the dataset output by run_analysis().
 
 To reproduce the results of the current analysis, you will need the following:
 1.  the Smartlab HAR Dataset available from the UCI Machine Learning Repository
-1.  the current R analysis script, run_analysis.R
+2.  the current R analysis script, run_analysis.R
 
 run_analysis() will utilize the following R libraries, which must be installed:
 *  dplyr
@@ -23,9 +23,9 @@ run_analysis() will utilize the following R libraries, which must be installed:
 
 ### Installing
 
-1.  Download the Smartlab HAR dataset from the UCI repository:
+*1.*  Download the Smartlab HAR dataset from the UCI repository:
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
-1.  Place the current R script, run_analysis.R, in the same directory as the HAR dataset
+*1.*  Place the current R script, run_analysis.R, in the same directory as the HAR dataset
 
 
 ## Running the tests
@@ -49,10 +49,10 @@ as follows:
 The function run_analysis() performs the following operations on the data sets:
 1.  Reads text file  activity_labels.txt  containing names and ID #s of each of the
 6 activities.
-1.  Reads the text file  features.txt  containing descriptive names of each of the
+2.  Reads the text file  features.txt  containing descriptive names of each of the
 accelerometer &/or gyro measurements.  These correspond to the columns/variables
 of the X data files.
-1.  Identifies the indices in the list of features for variables of interest, namely
+3.  Identifies the indices in the list of features for variables of interest, namely
 those containing either "mean" or "std" in their names.
 1.  Reads the train X data file.
 1.  Retains only those columns in X which correspond to features for "mean" and "std".
